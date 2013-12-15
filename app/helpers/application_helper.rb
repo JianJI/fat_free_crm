@@ -495,4 +495,8 @@ module ApplicationHelper
     end
   end
 
+  def paginate(params = {})
+    will_paginate({:renderer => RemoteLinkPaginationHelper::LinkRenderer}.merge(params))
+  end
+
 end
